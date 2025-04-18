@@ -1,13 +1,14 @@
+fe = 1000;           % Fréquence d'échantillonnage (Hz)
+f0 = 100;            % Fréquence du signal (Hz)
+t = -0.01:1/fe:0.01; % Domaine temporel pour 2 périodes (2 x 1/100 = 0.02 s)
+x = sin(2*pi*f0*t);  % Signal sinusoïdal
 
-fe = 1000;          % Fréquence d'échantillonnage en Hz
-t = -10:1/fe:10;    % Vecteur temps de -10s à 10s avec pas 1/fe
-f0 = 100;           % Fréquence du signal en Hz
-x = sin(2*pi*f0*t); % Signal sinusoïdal
+figure(7);
+plot(t, x, 'b', 'LineWidth', 2); % Tracé du signal
+grid on;
+xlabel('temps en (s)');
+ylabel('amplitude en (V)');
+title('Signal sinusoïdal sur deux périodes');
 
-figure(6);         
-stem(t,x);          
-grid on;            
-xlabel('temps en (s)');    
-ylabel('amplitude en (v)');
-title('signal sinusoïdal échantillonné'); 
-axis([0 0.02 -1.2 1.2]);  % Limite l'affichage à 2 périodes (0 à 0.02s) et amplitude ±1.2
+% Limiter l'affichage à deux périodes
+axis([-0.01 0.01 -1.2 1.2]);
