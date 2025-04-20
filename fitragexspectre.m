@@ -1,5 +1,3 @@
-% ===== Question 4 - Spectres avant et après filtrage =====
-
 % Calcul du spectre du signal original x(t)
 spx = abs(fft(x)) / fe;   % spectre normalisé
 % Calcul du spectre du signal filtré y(t)
@@ -8,7 +6,7 @@ spy = abs(fft(y)) / fe;
 % Axe des fréquences
 fr = linspace(0, fe, length(t));
 
-% Affichage des spectres
+
 figure;
 subplot(211);
 plot(fr, spx);
