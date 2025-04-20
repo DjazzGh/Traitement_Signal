@@ -1,15 +1,15 @@
-Fe = 1000;              % Fréquence d'échantillonnage
+Fe = 1000;            
 t = -10:1/Fe:10;        % Axe temporel
 
-p = zeros(size(t));     % Initialisation du signal p(t)
-id = (t > -0.5) & (t <= 0.5);  % Porte de largeur 1 (de -0.5 à 0.5)
+p = zeros(size(t));    
+id = (t > -0.5) & (t <= 0.5); 
 p(id) = 1;
 
 sp_p = abs(fft(p));     % Module de la transformée de Fourier
 sp_p = sp_p / Fe;       % Normalisation
 
 N = length(p);          % Nombre d'échantillons
-fr = (0:N-1)*(Fe/N);    % Axe des fréquences (Hz)
+fr = (0:N-1)*(Fe/N);    % Axe des fréquences 
 
 figure(2);
 subplot(2,1,1);
