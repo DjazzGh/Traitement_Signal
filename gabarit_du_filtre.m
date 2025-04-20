@@ -1,9 +1,9 @@
-% Paramètres du filtre
+
 fa = 200; % Fréquence de la bande passante (en Hz)
 fc = 350; % Fréquence de coupure (en Hz)
 fmax = 500; % Fréquence maximum pour l'affichage (en Hz)
 
-% Atténuations spécifiées
+
 ra = 2; % Atténuation maximale en bande passante (dB)
 rc = 40; % Atténuation minimale en bande atténuée (dB)
 rmax = 50; % Atténuation maximale sur toute la gamme de fréquence (en dB)
@@ -12,11 +12,11 @@ rmax = 50; % Atténuation maximale sur toute la gamme de fréquence (en dB)
 f = linspace(10, fmax, 500); % Fréquences réparties linéairement
 H = zeros(size(f));
 
-% Ajout des conditions du gabarit
+
 H(f < fa) = ra; % Atténuation maximale dans la bande passante
 H(f >= fc) = rc; % Atténuation minimale dans la bande atténuée
 
-% Tracé
+
 figure(5);
 plot(f, H, 'LineWidth', 2); % Tracé en échelle linéaire
 hold on;
