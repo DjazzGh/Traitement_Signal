@@ -1,4 +1,4 @@
-% Paramètres donnés
+
 fa = 200; % Fréquence de la bande passante (Hz)
 fc = 350; % Fréquence de la bande atténuée (Hz)
 ra = 2;   % Atténuation maximale en bande passante (2 dB)
@@ -24,7 +24,6 @@ aa = abs(1 ./ h); % Atténuation en module
 aa_db = 20 * log10(aa); % Atténuation en dB
 f = w / (2 * pi); % Conversion des pulsations en fréquences (Hz)
 
-% Tracé des graphiques
 figure;
 
 % Tracé du module de la fonction de transfert
