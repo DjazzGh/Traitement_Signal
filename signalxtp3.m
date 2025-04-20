@@ -7,7 +7,7 @@ x1 = cos(2*pi*f1*t);    % Composante à 100 Hz
 x2 = cos(2*pi*f2*t);    % Composante à 400 Hz
 x = x1 + x2;            % Signal composé
 
-% ✅ Affichage
+
 plot(t, x);
 xlabel('Temps (s)');
 ylabel('Amplitude');
